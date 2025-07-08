@@ -193,7 +193,7 @@ const teamMembers = [
         imageUrl: '/varshit.jpeg',
     },
     {
-        name: 'Aachal',
+        name: 'Aachal Bhandari',
         title: 'Social Media Manager',
         description: 'Crafting engaging stories that bring brands to life and build lasting digital communities.',
         imageUrl: '/aachal.jpeg',
