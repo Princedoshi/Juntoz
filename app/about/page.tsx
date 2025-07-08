@@ -182,7 +182,7 @@ const teamMembers = [
         imageUrl: '/akshat.png',
     },
     {
-        name: 'Tamanna',
+        name: 'Tamanna Tak',
         title: 'Senior Social Media Manager',
         description: 'Blending creativity and data to drive real engagement and help brands find their unique voice.',
         imageUrl: '/tamanna.jpeg',
@@ -218,7 +218,7 @@ const teamMembers = [
         imageUrl: '/bhavya.png',
     },
     {
-        name: 'Piyush',
+        name: 'Piyush Suthar',
         title: 'Senior Video Editor',
         description: 'Bringing stories to life with powerful visuals and seamless edits that capture attention.',
         imageUrl: '/piyush.png',
