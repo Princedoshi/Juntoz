@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, type FC } from 'react';
-import { ChevronRight, ArrowRight, Star, Users, Target, TrendingUp, CheckCircle, Quote } from 'lucide-react';
+import { ChevronRight, Users, Target, TrendingUp, CheckCircle, Quote } from 'lucide-react';
 import Link from 'next/link';
 
 const Home: FC = () => {
@@ -119,8 +119,9 @@ const Home: FC = () => {
                                 </span>
                             </h2>
                             <p className="text-xl text-gray-400 leading-relaxed">
-                                We're not just another digital agency. We're your strategic partner in building a powerful online presence that drives real results.
+                                We&apos;re not just another digital agency. We&apos;re your strategic partner in building a powerful online presence that drives real results.
                             </p>
+
                             <div className="space-y-4">
                                 {features.map((feature, index) => (
                                     <div key={index} className="flex items-start gap-3">
@@ -210,8 +211,9 @@ const Home: FC = () => {
                         <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
                             <Quote className="w-12 h-12 text-slate-400 mx-auto mb-6" />
                             <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                                "{testimonials[currentTestimonial].text}"
+                                &ldquo;{testimonials[currentTestimonial].text}&rdquo;
                             </p>
+
                             <div className="flex items-center justify-center gap-4">
                                 <div className="text-center">
                                     <div className="text-white font-semibold">
@@ -244,8 +246,9 @@ const Home: FC = () => {
                         Ready to Transform Your Business?
                     </h2>
                     <p className="text-xl text-gray-400 mb-8">
-                        Let's discuss how we can help you achieve your digital marketing goals.
+                        Let&apos;s discuss how we can help you achieve your digital marketing goals.
                     </p>
+
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <button className="bg-gradient-to-r from-slate-700 to-slate-600 border border-slate-600/50 px-8 py-4 rounded-full text-lg font-semibold hover:from-slate-600 hover:to-slate-500 transition-all duration-300 transform hover:scale-105">
                             Get Started Today

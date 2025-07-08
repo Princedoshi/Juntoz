@@ -40,9 +40,13 @@ const ContactPage: FC = () => {
                                 Touch
                             </span>
                         </h1>
-                        <p className="mt-6 text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                            Have a project in mind or a question for our team? We'd love to hear from you. Fill out the form below or reach out directly.
+                        <p
+                            className="mt-6 text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed animate-fade-in-up"
+                            style={{ animationDelay: '0.4s' }}
+                        >
+                            Have a project in mind or a question for our team? We&apos;d love to hear from you. Fill out the form below or reach out directly.
                         </p>
+
                     </div>
 
                     <div className="grid md:grid-cols-5 gap-10 items-start animate-fade-in-up" style={{ animationDelay: '0.6s' }}>

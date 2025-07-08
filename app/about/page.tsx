@@ -1,6 +1,7 @@
 'use client';
 
 import { FC, useState, useEffect } from 'react';
+import Image from 'next/image';
 
 // You can keep any icons you might want to use, for example:
 // import { Briefcase, Linkedin } from 'lucide-react';
@@ -45,13 +46,14 @@ const AboutPage: FC = () => {
                             </span>
                         </h1>
                         <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                            Juntoz was born from a vision to demystify digital marketing and deliver tangible results. Our name, inspired by the Spanish word for 'together', reflects our core belief in collaborative partnership and shared success.
+                            Juntoz was born from a vision to demystify digital marketing and deliver tangible results. Our name, inspired by the Spanish word for &apos;together&apos;, reflects our core belief in collaborative partnership and shared success.
                         </p>
+
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center bg-slate-800/20 backdrop-blur-sm border border-slate-700/50 p-8 rounded-3xl animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                         <div className="md:col-span-1 flex justify-center">
-                            <img
+                            <Image
                                 src="/sujal.png"
                                 alt="Sujal Mehta, Founder of Juntoz"
                                 className="h-60 md:h-72 rounded-full object-cover border-4 border-slate-700/60 shadow-xl"
@@ -61,11 +63,12 @@ const AboutPage: FC = () => {
                         </div>
                         <div className="md:col-span-2 text-center md:text-left">
                             <h2 className="text-3xl font-bold text-white">Sujal Mehta</h2>
-                            <p className="text-lg text-slate-400 mb-4">Founder & CEO</p>
+                            <p className="text-lg text-slate-400 mb-4">Founder &amp; CEO</p>
                             <p className="text-gray-300 leading-relaxed">
-                                “I lead the growth and strategic direction of Juntoz, ensuring we deliver impactful solutions that help brands scale and succeed in the digital world. My passion is to build a company that thrives on innovation, collaboration, and a relentless focus on our clients' goals.”
+                                &ldquo;I lead the growth and strategic direction of Juntoz, ensuring we deliver impactful solutions that help brands scale and succeed in the digital world. My passion is to build a company that thrives on innovation, collaboration, and a relentless focus on our clients&apos; goals.&rdquo;
                             </p>
                         </div>
+
                     </div>
 
 
@@ -73,7 +76,7 @@ const AboutPage: FC = () => {
                     <div className="space-y-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
                         <div className="text-center">
                             <h2 className="text-4xl md:text-5xl font-bold text-white">Meet the Team</h2>
-                            <p className="text-lg text-gray-400 mt-2">The creative minds behind your brand's success.</p>
+                            <p className="text-lg text-gray-400 mt-2">The creative minds behind your brand&apos;s success.</p>
                         </div>
 
                         {/* Employee Cards Grid */}
@@ -83,7 +86,7 @@ const AboutPage: FC = () => {
                                     key={index}
                                     className="group relative p-6 text-center rounded-2xl border border-slate-700/50 bg-slate-800/20 backdrop-blur-sm transition-all duration-300 hover:bg-slate-800/40 hover:border-slate-600/60 hover:shadow-2xl hover:shadow-slate-700/30 transform hover:-translate-y-2"
                                 >
-                                    <img
+                                    <Image
                                         src={member.imageUrl}
                                         alt={`Photo of ${member.name}`}
                                         className="w-28 h-40 rounded-full object-cover mx-auto mb-4 border-2 border-slate-600/50 group-hover:border-slate-500/70 transition-all duration-300"

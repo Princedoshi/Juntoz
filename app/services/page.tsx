@@ -219,12 +219,4 @@ const servicesList = [
         icon: Users
     },
 ];
-
-const stats = [
-    { value: '500+', label: 'Projects Completed' },
-    { value: '100+', label: 'Happy Clients' },
-    { value: '50+', label: 'Team Members' },
-    { value: '24/7', label: 'Support Available' }
-];
-
 export default ServicesPage;

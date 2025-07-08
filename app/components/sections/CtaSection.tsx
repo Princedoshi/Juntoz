@@ -8,8 +8,9 @@ const CtaSection: FC = () => (
                 Ready to Transform Your Business?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-                Let's discuss how we can help you achieve your digital marketing goals and drive exceptional growth.
+                Let&apos;s discuss how we can help you achieve your digital marketing goals and drive exceptional growth.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Get Free Consultation
