@@ -3,9 +3,6 @@
 import { FC, useState, useEffect } from 'react';
 import Image from 'next/image';
 
-// You can keep any icons you might want to use, for example:
-// import { Briefcase, Linkedin } from 'lucide-react';
-
 const AboutPage: FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -22,7 +19,7 @@ const AboutPage: FC = () => {
 
     return (
         <>
-            <section className="relative min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 py-20">
+            <section className="relative min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 pt-20 pb-20">
                 {/* Subtle Mouse Spotlight */}
                 <div
                     className="pointer-events-none fixed inset-0 z-30 transition duration-300"
@@ -31,52 +28,55 @@ const AboutPage: FC = () => {
                     }}
                 ></div>
 
-                {/* Refined Floating Elements */}
-                <div className="absolute top-20 left-10 w-32 h-32 bg-slate-600/10 rounded-full blur-3xl animate-float-slow"></div>
+                {/* Refined Floating Elements - adjusted positions */}
+                <div className="absolute top-32 left-10 w-32 h-32 bg-slate-600/10 rounded-full blur-3xl animate-float-slow"></div>
                 <div className="absolute bottom-20 right-10 w-40 h-40 bg-gray-600/10 rounded-full blur-3xl animate-float-reverse"></div>
                 <div className="absolute top-1/2 left-1/4 w-28 h-28 bg-slate-500/10 rounded-full blur-3xl animate-float"></div>
 
-                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+                <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 md:space-y-20">
                     {/* --- Story and CEO Section --- */}
                     <div className="text-center space-y-8 animate-fade-in-up">
-                        <h1 className="text-6xl md:text-8xl font-bold leading-tight">
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
                             <span className="block text-white">Our</span>
                             <span className="block bg-gradient-to-r from-slate-300 via-gray-200 to-slate-300 bg-clip-text text-transparent animate-gradient">
                                 Story
                             </span>
                         </h1>
-                        <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
                             Juntoz was born from a vision to demystify digital marketing and deliver tangible results. Our name, inspired by the Spanish word for &apos;together&apos;, reflects our core belief in collaborative partnership and shared success.
                         </p>
-
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center bg-slate-800/20 backdrop-blur-sm border border-slate-700/50 p-8 rounded-3xl animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                        <div className="md:col-span-1 flex justify-center">
-                            <Image
-                                src="/sujal.png"
-                                alt="Sujal Mehta, Founder of Juntoz"
-                                className="h-60 md:h-72 rounded-full object-cover border-4 border-slate-700/60 shadow-xl"
-                            />
-
-
+                    {/* CEO Section */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center bg-slate-800/20 backdrop-blur-sm border border-slate-700/50 p-6 md:p-8 rounded-3xl animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                        <div className="lg:col-span-1 flex justify-center">
+                            <div className="relative">
+                                <Image
+                                    src="/sujal.png"
+                                    alt="Sujal Mehta, Founder of Juntoz"
+                                    width={320} // equivalent to w-60 (60 × 4 = 240px)
+                                    height={320} // equivalent to h-60
+                                    className="md:h-96 md:w-56 rounded-full object-cover border-4 border-slate-700/60 shadow-xl"
+                                />
+                                <div className="absolute inset-0 rounded-full bg-gradient-to-t from-slate-800/20 to-transparent"></div>
+                            </div>
                         </div>
-                        <div className="md:col-span-2 text-center md:text-left">
-                            <h2 className="text-3xl font-bold text-white">Sujal Mehta</h2>
-                            <p className="text-lg text-slate-400 mb-4">Founder &amp; CEO</p>
-                            <p className="text-gray-300 leading-relaxed">
+                        <div className="lg:col-span-2 text-center lg:text-left space-y-4">
+                            <div>
+                                <h2 className="text-2xl md:text-3xl font-bold text-white">Sujal Mehta</h2>
+                                <p className="text-lg text-slate-400">Founder &amp; CEO</p>
+                            </div>
+                            <p className="text-gray-300 leading-relaxed text-base md:text-lg">
                                 &ldquo;I lead the growth and strategic direction of Juntoz, ensuring we deliver impactful solutions that help brands scale and succeed in the digital world. My passion is to build a company that thrives on innovation, collaboration, and a relentless focus on our clients&apos; goals.&rdquo;
                             </p>
                         </div>
-
                     </div>
-
 
                     {/* --- Team Section --- */}
                     <div className="space-y-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-                        <div className="text-center">
-                            <h2 className="text-4xl md:text-5xl font-bold text-white">Meet the Team</h2>
-                            <p className="text-lg text-gray-400 mt-2">The creative minds behind your brand&apos;s success.</p>
+                        <div className="text-center space-y-4">
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">Meet the Team</h2>
+                            <p className="text-base md:text-lg text-gray-400">The creative minds behind your brand&apos;s success.</p>
                         </div>
 
                         {/* Employee Cards Grid */}
@@ -86,16 +86,24 @@ const AboutPage: FC = () => {
                                     key={index}
                                     className="group relative p-6 text-center rounded-2xl border border-slate-700/50 bg-slate-800/20 backdrop-blur-sm transition-all duration-300 hover:bg-slate-800/40 hover:border-slate-600/60 hover:shadow-2xl hover:shadow-slate-700/30 transform hover:-translate-y-2"
                                 >
-                                    <Image
-                                        src={member.imageUrl}
-                                        alt={`Photo of ${member.name}`}
-                                        className="w-28 h-40 rounded-full object-cover mx-auto mb-4 border-2 border-slate-600/50 group-hover:border-slate-500/70 transition-all duration-300"
-                                    />
-                                    <h3 className="text-xl font-bold text-white">{member.name}</h3>
-                                    <p className="text-slate-400 mb-3">{member.title}</p>
-                                    <p className="text-sm text-gray-400 leading-snug group-hover:text-gray-300 transition-colors">
-                                        {member.description}
-                                    </p>
+                                    <div className="relative mb-4">
+                                        <Image
+                                            src={member.imageUrl}
+                                            alt={`Photo of ${member.name}`}
+                                            width={112}
+                                            height={140}
+                                            className="w-28 h-35 rounded-full object-cover mx-auto border-2 border-slate-600/50 group-hover:border-slate-500/70 transition-all duration-300"
+                                        />
+                                        <div className="absolute inset-0 rounded-full bg-gradient-to-t from-slate-800/10 to-transparent"></div>
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <h3 className="text-lg md:text-xl font-bold text-white">{member.name}</h3>
+                                        <p className="text-slate-400 text-sm md:text-base">{member.title}</p>
+                                        <p className="text-sm text-gray-400 leading-snug group-hover:text-gray-300 transition-colors">
+                                            {member.description}
+                                        </p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -185,7 +193,6 @@ const teamMembers = [
         description: 'Turning creative ideas into data-driven ad campaigns that deliver measurable results.',
         imageUrl: '/manvi.jpeg',
     },
-
     {
         name: 'Varshit Shah',
         title: 'Sr. Social Media Manager, Designer & Editor',
@@ -208,7 +215,7 @@ const teamMembers = [
         name: 'Bhavya Mehta',
         title: 'Social Media Executive',
         description: 'Creating content that sparks conversations and grows communities, one post at a time.',
-        imageUrl: 'https://i.ibb.co/1Q56402/Bhavya-Mehta.png',
+        imageUrl: '/bhavya.png',
     },
     {
         name: 'Piyush',

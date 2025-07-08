@@ -20,7 +20,8 @@ const ServicesPage: FC = () => {
 
     return (
         <>
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
+            {/* Main Section with proper top padding for navbar */}
+            <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 pt-20">
                 {/* Subtle Mouse Spotlight */}
                 <div
                     className="pointer-events-none absolute inset-0 z-10 transition duration-700"
@@ -30,18 +31,20 @@ const ServicesPage: FC = () => {
                 ></div>
 
                 {/* Refined Floating Elements */}
-                <div className="absolute top-20 left-10 w-32 h-32 bg-slate-600/10 rounded-full blur-3xl animate-float-slow"></div>
+                <div className="absolute top-32 left-10 w-32 h-32 bg-slate-600/10 rounded-full blur-3xl animate-float-slow"></div>
                 <div className="absolute bottom-20 right-10 w-40 h-40 bg-gray-600/10 rounded-full blur-3xl animate-float-reverse"></div>
                 <div className="absolute top-1/2 left-1/4 w-28 h-28 bg-slate-500/10 rounded-full blur-3xl animate-float"></div>
                 <div className="absolute top-1/3 right-1/4 w-36 h-36 bg-gray-500/10 rounded-full blur-3xl animate-float-slow"></div>
 
                 {/* Minimal Geometric Patterns */}
-                <div className="absolute top-10 right-20 w-16 h-16 border border-slate-600/20 rotate-45 animate-spin-slow"></div>
+                <div className="absolute top-24 right-20 w-16 h-16 border border-slate-600/20 rotate-45 animate-spin-slow"></div>
                 <div className="absolute bottom-32 left-20 w-12 h-12 border border-gray-600/20 rotate-12 animate-pulse"></div>
 
-                <div className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+                {/* Content Container with better spacing */}
+                <div className="relative z-20 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12 py-12">
+                    {/* Header Section */}
                     <div className="space-y-8">
-                        <h1 className="text-6xl md:text-8xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                             <span className="block text-white">Our</span>
                             <span className="block bg-gradient-to-r from-slate-300 via-gray-200 to-slate-300 bg-clip-text text-transparent animate-gradient">
                                 Services
@@ -49,8 +52,8 @@ const ServicesPage: FC = () => {
                         </h1>
 
                         <div className="relative">
-                            <p className="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                                At <span className="text-slate-300 font-bold text-2xl">Juntoz</span>, we offer 360° digital marketing solutions to grow your brand and drive exceptional results.
+                            <p className="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+                                At <span className="text-slate-300 font-bold text-xl md:text-2xl">Juntoz</span>, we offer 360° digital marketing solutions to grow your brand and drive exceptional results.
                             </p>
                             <div className="absolute -top-2 -right-2 w-3 h-3 bg-slate-400 rounded-full animate-ping"></div>
                         </div>
@@ -219,4 +222,5 @@ const servicesList = [
         icon: Users
     },
 ];
+
 export default ServicesPage;
